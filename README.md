@@ -2,7 +2,9 @@
 
 ### 'function'
 
+'function'
 
+<code>function</code>
 
 
 
