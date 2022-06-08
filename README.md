@@ -1,10 +1,4 @@
-'function(){}' 의 축양형은 ()=>{}
-
-### 'function'
-
-'function'
-
-<code>function</code>
+<code>function(){}</code> 의 축약형은 <code>()=>{}</code>
 
 
 
