@@ -1,5 +1,6 @@
 'function(){}' 의 축양형은 ()=>{}
 
+### 'function'
 
 
 
