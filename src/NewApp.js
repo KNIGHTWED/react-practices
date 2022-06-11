@@ -9,10 +9,17 @@ class NewApp extends React.Component{
   };
   getDust(){
     const API_KEY = process.env.REACT_APP_EV_KEY;
+    // const url = 'http://apis.data.go.kr/B552584/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth'
     const url = '/B552584/UlfptcaAlarmInqireSvc/getUlfptcaAlarmInfo?year=2020&pageNo=1&numOfRows=10&returnType=json&serviceKey='+{API_KEY}
+    // let queryParams = '?' + encodeURIComponent('serviceKey')+'='+API_KEY;
+    // queryParams += encodeURIComponent('returnType') + '='+ encodeURIComponent('json');
+    // queryParams += encodeURIComponent('numOfRows') + '='+ encodeURIComponent('100');
+    // queryParams += encodeURIComponent('pageNo') + '='+ encodeURIComponent('1');
+    // queryParams += encodeURIComponent('searchDate') + '='+ encodeURIComponent('2020-11-14');
+    // queryParams += encodeURIComponent('informCode') + '='+ encodeURIComponent('PM10');
+
     axios.get(url).then((response)=>{
       const data = response.data;//막히는 곳
-      console.log(data);
 
       this.setState({
         isLoading: false,
@@ -34,8 +41,8 @@ class NewApp extends React.Component{
           </div>
         </section>
         );
-    } else{
-      console.log(data);
+    } else if (isLoading === true) {
+      console.log(data.dataDate);
       return(
       <div className='dustInfo'>
         <div>
